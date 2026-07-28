@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo Ecosar · Ingeniería, instalación y mantenimiento de energía</title>
+<meta name="description" content="Grupo Ecosar proyecta, instala, legaliza y mantiene instalaciones de energía desde Asturias. Fotovoltaica, térmica, eléctrica y gas. 20 MW en mantenimiento.">
+<!-- Es un boceto de propuesta, no la web publicada de Ecosar: no debe indexarse
+     ni aparecer en buscadores por delante del sitio real de la empresa. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0d1219">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/martianmono-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230d1219'/><path d='M8 20h16M8 14h16M8 8h16' stroke='%23ffab52' stroke-width='3'/></svg>">
+</head>
+<body>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot__inner">
+    <span class="boot__mark">ECOSAR</span>
+    <span class="boot__meta mono">OLLONIEGO · ASTURIAS · EST. 2005</span>
+    <div class="boot__bar"><i id="bootBar"></i></div>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top" aria-label="Grupo Ecosar, inicio">
+    <svg class="nav__logo" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
+      <path d="M2 3h24M2 10h17M2 17h24" stroke="currentColor" stroke-width="2.6" fill="none"/>
+    </svg>
+    <span>Grupo&nbsp;Ecosar</span>
+  </a>
+  <nav class="nav__links" aria-label="Principal">
+    <a href="#capacidades">Qué hacemos</a>
+    <a href="#obras">Obras</a>
+    <a href="#presencia">Presencia</a>
+    <a href="#mantenimiento">Mantenimiento</a>
+  </nav>
+  <div class="nav__end">
+    <span class="mono nav__clock" id="navClock" aria-hidden="true">--:--:--</span>
+    <a class="btn btn--sm" href="#contacto">Pedir un estudio</a>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ─────────── HERO ─────────── -->
+<section class="hero" id="top">
+  <canvas class="hero__gl" id="heroGl" aria-hidden="true"></canvas>
+  <div class="hero__scrim" aria-hidden="true"></div>
+
+  <div class="hero__body">
+    <p class="hud"><span class="hud__dot" aria-hidden="true"></span>43°21′N 5°51′O · Olloniego, Asturias</p>
+    <h1 class="hero__title">
+      <span class="line">De la sala de calderas</span>
+      <span class="line">de un portal a <em>68&nbsp;MW</em></span>
+      <span class="line">en Atacama.</span>
+    </h1>
+    <p class="hero__lead">
+      Grupo Ecosar proyecta, instala, legaliza y mantiene instalaciones de energía.
+      Desde Asturias, desde 2005.
+    </p>
+    <div class="hero__cta">
+      <a class="btn" href="#obras">Ver las obras</a>
+      <a class="btn btn--ghost" href="#contacto">Pedir un estudio</a>
+    </div>
+  </div>
+
+  <div class="hero__rail" aria-hidden="true">
+    <div class="rail__item"><b class="mono">20&nbsp;MW</b><span>en mantenimiento</span></div>
+    <div class="rail__item"><b class="mono">10.000</b><span>paneles instalados</span></div>
+    <div class="rail__item"><b class="mono">8</b><span>comunidades autónomas</span></div>
+    <div class="rail__item rail__scroll"><span>Desliza</span><i></i></div>
+  </div>
+</section>
+
+<!-- ─────────── MANIFIESTO ─────────── -->
+<section class="manifesto">
+  <p class="manifesto__text" id="manifesto">
+    Una instalación no termina el día que se enciende. Empieza. Lo que decide si un proyecto ha
+    salido bien son los veinte años siguientes: el mantenimiento al día, los papeles en regla y
+    alguien que coge el teléfono cuando la caldera falla un sábado.
+  </p>
+</section>
+
+<!-- ─────────── CIFRAS ─────────── -->
+<section class="readout" id="cifras">
+  <div class="readout__head">
+    <h2 class="h2">Lo que hay puesto<br>y funcionando</h2>
+    <p class="readout__note">Cifras del cierre de 2023 y de los contratos de mantenimiento
+    vigentes. Nueve personas en plantilla las sostienen.</p>
+  </div>
+
+  <div class="readout__grid">
+    <dl class="figures">
+      <div class="fig"><dt>Potencia en contrato de mantenimiento</dt><dd><span class="num" data-to="20">0</span> <i>MW</i></dd></div>
+      <div class="fig"><dt>Paneles fotovoltaicos instalados</dt><dd><span class="num" data-to="10000" data-sep>0</span></dd></div>
+      <div class="fig"><dt>Proyectos fotovoltaicos ejecutados en 2023</dt><dd><span class="num" data-to="100">0</span><i>+</i></dd></div>
+      <div class="fig"><dt>Potencia conectada en 2023</dt><dd><span class="num" data-to="4">0</span> <i>MW</i></dd></div>
+      <div class="fig"><dt>Años desde la constitución, en 2005</dt><dd><span class="num" data-to="21">0</span></dd></div>
+      <div class="fig"><dt>Personas en plantilla, todas fijas</dt><dd><span class="num" data-to="9">0</span></dd></div>
+    </dl>
+
+    <figure class="plot">
+      <canvas id="plotCanvas" aria-hidden="true"></canvas>
+      <div class="plot__hud mono" aria-hidden="true">
+        <span>PRODUCCIÓN · kW</span>
+        <span id="plotVal">—</span>
+      </div>
+      <figcaption>
+        Curva de producción diaria de una planta de la cartera. Representación ilustrativa;
+        el portal de cliente muestra el dato real de cada instalación.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ─────────── CAPACIDADES ─────────── -->
+<section class="cap" id="capacidades">
+  <div class="cap__sticky">
+    <h2 class="h2">Seis líneas,<br>un solo equipo</h2>
+    <div class="cap__stage" aria-hidden="true">
+      <svg class="schem" viewBox="0 0 240 170" data-schem="1">
+        <g class="s-line">
+          <path d="M30 140h180"/>
+          <path d="M52 140V64h44v76M112 140V44h44v96M172 140V92h32v48"/>
+          <path d="M52 88h44M112 74h44M172 108h32"/>
+        </g>
+        <g class="s-accent"><path d="M30 52c46 0 46 30 92 30s90-46 118-46"/></g>
+        <g class="s-dot"><circle cx="30" cy="52" r="3.5"/><circle cx="240" cy="36" r="3.5"/></g>
+      </svg>
+      <svg class="schem" viewBox="0 0 240 170" data-schem="2">
+        <g class="s-line">
+          <rect x="26" y="72" width="52" height="62" rx="3"/>
+          <path d="M52 72V46h56"/>
+          <path d="M108 46v88M108 90h56M164 66v88"/>
+          <rect x="164" y="52" width="50" height="14" rx="2"/>
+          <path d="M176 106v28M188 106v28M200 106v28"/>
+          <rect x="164" y="98" width="46" height="8" rx="2"/>
+        </g>
+        <g class="s-accent"><path d="M40 106c0-10 12-12 12-22 0 10 12 12 12 22a12 12 0 0 1-24 0Z"/></g>
+        <g class="s-dot"><circle cx="108" cy="90" r="3.5"/></g>
+      </svg>
+      <svg class="schem" viewBox="0 0 240 170" data-schem="3">
+        <g class="s-line">
+          <path d="M22 40h196"/>
+          <path d="M60 40v22M120 40v22M180 40v22"/>
+          <circle cx="60" cy="74" r="12"/><circle cx="120" cy="74" r="12"/>
+          <path d="M60 86v18M120 86v18M180 62v42"/>
+          <path d="M22 104h196"/>
+          <path d="M60 104v20h-14v18h28v-18h-14M120 104v36M180 104v36"/>
+          <rect x="106" y="140" width="28" height="14" rx="2"/>
+          <path d="M170 140h20l-10 16Z"/>
+        </g>
+        <g class="s-accent"><path d="M22 40h196"/></g>
+        <g class="s-dot"><circle cx="180" cy="74" r="3.5"/></g>
+      </svg>
+      <svg class="schem" viewBox="0 0 240 170" data-schem="4">
+        <g class="s-line">
+          <rect x="24" y="60" width="46" height="42" rx="3"/>
+          <path d="M32 74h30M32 84h20"/>
+          <path d="M70 81h32M118 81h40M174 81h44"/>
+          <circle cx="110" cy="81" r="8"/>
+          <path d="M110 73v-14M104 59h12"/>
+          <rect x="158" y="70" width="16" height="22" rx="2"/>
+          <path d="M218 81v46H60"/>
+        </g>
+        <g class="s-accent"><path d="M54 138c0-9 11-11 11-20 0 9 11 11 11 20a11 11 0 0 1-22 0Z"/></g>
+        <g class="s-dot"><circle cx="110" cy="81" r="3.5"/></g>
+      </svg>
+      <svg class="schem" viewBox="0 0 240 170" data-schem="5">
+        <g class="s-line">
+          <rect x="26" y="28" width="188" height="118" rx="3"/>
+          <path d="M26 44h188M198 28v118"/>
+          <path d="M198 62h16M198 88h16M198 114h16"/>
+          <path d="M62 122V78l38-26 38 26v44"/>
+          <path d="M84 122V98h32v24"/>
+          <path d="M50 134h100"/>
+          <path d="M50 130v8M150 130v8"/>
+        </g>
+        <g class="s-accent"><path d="M46 78a58 58 0 0 1 108 0"/></g>
+        <g class="s-dot"><circle cx="100" cy="52" r="3.5"/></g>
+      </svg>
+      <svg class="schem" viewBox="0 0 240 170" data-schem="6">
+        <g class="s-line">
+          <path d="M26 118h84l22-46H48Z"/>
+          <path d="M60 118 76 72M84 118l14-46M40 95h74"/>
+          <path d="M150 138V96a26 26 0 0 1 52 0v42"/>
+          <path d="M162 138v-42a14 14 0 0 1 28 0v42"/>
+          <path d="M140 138h72"/>
+        </g>
+        <g class="s-accent"><circle cx="176" cy="44" r="16"/><path d="M176 16v10M176 62v10M148 44h10M194 44h10M156 24l7 7M189 57l7 7M196 24l-7 7M163 57l-7 7"/></g>
+        <g class="s-dot"><circle cx="176" cy="44" r="3.5"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <ol class="cap__list">
+    <li class="cap__item" data-cap="1">
+      <h3>Eficiencia y gestión energética</h3>
+      <p>Auditamos lo que se gasta, modelamos lo que hace falta y renovamos los equipos financiando
+      la obra con el propio ahorro. Contrato de garantía total con presupuesto anual cerrado.</p>
+      <p class="cap__meta mono">Auditoría · modelización · garantía total</p>
+    </li>
+    <li class="cap__item" data-cap="2">
+      <h3>Instalaciones térmicas</h3>
+      <p>Salas de calderas, agua caliente sanitaria, calefacción bitubo y monotubo, suelo radiante,
+      climatización y aerotermia. En comunidades de vecinos: válvulas termostáticas, detentores y
+      repartidores de coste.</p>
+      <p class="cap__meta mono">Empresa mantenedora RITE</p>
+    </li>
+    <li class="cap__item" data-cap="3">
+      <h3>Instalaciones eléctricas</h3>
+      <p>Comercio, industria, vivienda y comunidad. Centros de transformación, redes aéreas y
+      subterráneas, protección contra incendios, iluminación, boletines y legalizaciones, y puntos
+      de recarga de vehículo eléctrico.</p>
+      <p class="cap__meta mono">Boletines · CIE · legalización</p>
+    </li>
+    <li class="cap__item" data-cap="4">
+      <h3>Gas y gasoil</h3>
+      <p>Altas, reformas, revisiones periódicas y mantenimiento con certificado oficial, para
+      vivienda, comunidad e industria.</p>
+      <p class="cap__meta mono">Empresa instaladora de gas autorizada</p>
+    </li>
+    <li class="cap__item" data-cap="5">
+      <h3>Ingeniería y proyectos</h3>
+      <p>Estudio de viabilidad, proyecto básico y de detalle, dirección de obra, especificaciones
+      técnicas, automatización y control, tramitación ante la administración y gestión de ayudas y
+      subvenciones.</p>
+      <p class="cap__meta mono">Redacción · dirección de obra · tramitación</p>
+    </li>
+    <li class="cap__item" data-cap="6">
+      <h3>Renovables e I+D</h3>
+      <p>Fotovoltaica, solar térmica, biomasa de pellet y leña, y geotermia. Dos proyectos de
+      investigación propios: HIDROWAVE, de desalación, y una caldera de biomasa domotizada
+      desarrollada con la Universidad de Oviedo.</p>
+      <p class="cap__meta mono">HIDROWAVE 2,2 M€ · biomasa 1,2 M€</p>
+    </li>
+  </ol>
+</section>
+
+<!-- ─────────── EXPEDIENTE ─────────── -->
+<section class="steps">
+  <div class="steps__head">
+    <h2 class="h3">El expediente de una instalación de autoconsumo, entero</h2>
+    <p>Ninguno de estos ocho pasos se subcontrata a una gestoría. Lo lleva la misma persona que
+    firma el proyecto, y por eso sabemos en qué punto está cada obra.</p>
+  </div>
+  <ol class="steps__list" id="steps">
+    <li><span class="mono">01</span> Estudio y propuesta económica</li>
+    <li><span class="mono">02</span> Presupuesto cerrado</li>
+    <li><span class="mono">03</span> Proyecto o memoria técnica</li>
+    <li><span class="mono">04</span> Acopio de materiales</li>
+    <li><span class="mono">05</span> Instalación</li>
+    <li><span class="mono">06</span> Certificado eléctrico CIE</li>
+    <li><span class="mono">07</span> Declaración de conformidad</li>
+    <li><span class="mono">08</span> Declaración responsable y alta</li>
+  </ol>
+</section>
+
+<!-- ─────────── ATACAMA (fold ámbar) ─────────── -->
+<section class="drench" id="atacama">
+  <div class="drench__media" aria-hidden="true">
+    <img src="assets/img/atacama.jpg" alt="" loading="lazy" decoding="async">
+  </div>
+  <div class="drench__body">
+    <p class="hud hud--dark">Planta PV El Salvador · Desierto de Atacama, Chile</p>
+    <p class="drench__num"><span class="num" data-to="68">0</span> MW</p>
+    <p class="drench__lead">
+      155 hectáreas montadas en 270 días para SunPower, en UTE con SEMI, Procoin y P+E Energía.
+      Una obra de 22 millones de dólares ejecutada por una empresa asturiana de nueve personas.
+    </p>
+    <dl class="drench__spec mono">
+      <div><dt>Superficie</dt><dd>155 ha</dd></div>
+      <div><dt>Plazo</dt><dd>270 días</dd></div>
+      <div><dt>Importe</dt><dd>22 M USD</dd></div>
+      <div><dt>Mandante</dt><dd>SunPower</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ─────────── OBRAS (acto papel) ─────────── -->
+<section class="works" id="obras">
+  <div class="works__head">
+    <h2 class="h2">El mismo equipo,<br>a las dos escalas</h2>
+    <p class="works__intro">Una licitación municipal de 371.135 € y la sala de calderas de un
+    edificio de Gijón se llevan con el mismo procedimiento. Cambia el tamaño del acopio, no el
+    expediente.</p>
+  </div>
+
+  <article class="work work--text">
+    <div class="work__data">
+      <p class="hud hud--paper">Ayuntamiento de Tardelcuende · Soria · 2025</p>
+      <h3 class="work__title">Cinco edificios municipales, fotovoltaica y aerotermia</h3>
+      <p>Contrato público de 371.135 € y 120 días de plazo: instalación fotovoltaica en cinco
+      edificios del ayuntamiento y trece equipos de aerotermia, con un ahorro estimado del 80 % de
+      la factura eléctrica municipal.</p>
+      <dl class="work__spec mono">
+        <div><dt>Importe</dt><dd>371.135 €</dd></div>
+        <div><dt>Plazo</dt><dd>120 días</dd></div>
+        <div><dt>Aerotermia</dt><dd>2 + 7 + 4 equipos</dd></div>
+        <div><dt>Programa</dt><dd>DUS 5000 · IDAE · Next Generation EU</dd></div>
+      </dl>
+    </div>
+    <div class="work__mark mono" aria-hidden="true">80&thinsp;% menos<br>de factura</div>
+  </article>
+
+  <article class="work">
+    <figure class="work__fig">
+      <img src="assets/img/tiltil.jpg" alt="Filas de seguidores fotovoltaicos sobre zapatas de hormigón en la planta de Til-Til, con un depósito de agua al fondo" loading="lazy" decoding="async">
+    </figure>
+    <div class="work__data">
+      <p class="hud hud--paper">KDM · Til-Til, Santiago de Chile</p>
+      <h3 class="work__title">Planta fotovoltaica de 1 MW</h3>
+      <p>Diseño e instalación completa para KDM en la Región Metropolitana de Santiago, con
+      estructura sobre zapatas y conexión a la red interior del cliente.</p>
+    </div>
+  </article>
+
+  <article class="work work--flip">
+    <figure class="work__fig">
+      <img src="assets/img/calderas_gas.jpg" alt="Sala de calderas con bombas de recirculación, intercambiador de placas y colectores de impulsión y retorno" loading="lazy" decoding="async">
+    </figure>
+    <div class="work__data">
+      <p class="hud hud--paper">Comunidades de propietarios · Gijón y Oviedo</p>
+      <h3 class="work__title">Transformación de salas de calderas a gas natural</h3>
+      <p>Estudio de la instalación existente, cálculo del nuevo régimen de funcionamiento,
+      sustitución de generadores y bombeo, y legalización. Con presupuesto anual cerrado de
+      mantenimiento cuando la comunidad lo pide.</p>
+    </div>
+  </article>
+
+  <article class="work">
+    <figure class="work__fig">
+      <img src="assets/img/chile15.jpg" alt="Módulos fotovoltaicos montados sobre la cubierta metálica de un edificio en el centro de Santiago de Chile" loading="lazy" decoding="async">
+    </figure>
+    <div class="work__data">
+      <p class="hud hud--paper">Autoconsumo en cubierta · Chile</p>
+      <h3 class="work__title">Fotovoltaica de 15 kW sobre edificio urbano</h3>
+      <p>Diseño y montaje en cubierta existente, resolviendo anclaje, paso de canalizaciones y
+      convivencia con la instalación eléctrica del edificio.</p>
+    </div>
+  </article>
+
+  <article class="work work--flip">
+    <figure class="work__fig">
+      <img src="assets/img/termica_acs.jpg" alt="Captadores solares térmicos planos instalados sobre un tejado de teja curva" loading="lazy" decoding="async">
+    </figure>
+    <div class="work__data">
+      <p class="hud hud--paper">Vivienda · Asturias</p>
+      <h3 class="work__title">Solar térmica para producción de ACS</h3>
+      <p>Captadores planos, acumulación e integración con la caldera existente. La instalación
+      pequeña que sostiene la cartera de mantenimiento durante veinte años.</p>
+    </div>
+  </article>
+
+  <article class="work">
+    <figure class="work__fig">
+      <img src="assets/img/urbaser.jpg" alt="Vista aérea de las naves industriales de Urbaser rodeadas de arbolado" loading="lazy" decoding="async">
+    </figure>
+    <div class="work__data">
+      <p class="hud hud--paper">Urbaser · Asturias</p>
+      <h3 class="work__title">Proyecto y adaptación de la sala de calderas de la nave</h3>
+      <p>Cliente industrial: dimensionado según el uso real de la nave, adaptación de la sala
+      existente y puesta en marcha sin parar la actividad.</p>
+    </div>
+  </article>
+</section>
+
+<!-- ─────────── PRESENCIA ─────────── -->
+<section class="reach" id="presencia">
+  <div class="reach__body">
+    <h2 class="h2">Ocho comunidades autónomas<br>y cuatro continentes</h2>
+    <p class="reach__lead">
+      La ficha de obras recoge trabajos en Chile, México, Brasil, Qatar, Marruecos, Jordania,
+      Mauritania, Portugal, Polonia y Rusia, además de Asturias, Cantabria, León, Navarra, País
+      Vasco, Galicia, Soria y Madrid.
+    </p>
+    <ul class="reach__list mono">
+      <li><b>Chile</b><span>PV El Salvador 68 MW · Til-Til 1 MW</span></li>
+      <li><b>España</b><span>8 comunidades autónomas · delegación en Madrid</span></li>
+      <li><b>Resto</b><span>México · Brasil · Qatar · Marruecos · Jordania · Mauritania · Portugal · Polonia · Rusia</span></li>
+    </ul>
+  </div>
+  <div class="reach__globe">
+    <canvas id="globeCanvas" aria-hidden="true"></canvas>
+    <p class="reach__hint mono" aria-hidden="true">Arrastra para girar</p>
+  </div>
+</section>
+
+<!-- ─────────── MANTENIMIENTO ─────────── -->
+<section class="watch" id="mantenimiento">
+  <div class="watch__head">
+    <h2 class="h2">Vemos la planta<br>antes de que llaméis</h2>
+    <p class="watch__lead">
+      Mantenemos 20 MW en contrato. Con la telemetría del inversor conectada, una caída de
+      producción abre el aviso sola: nadie tiene que esperar a la factura del mes siguiente para
+      enterarse de que una rama de módulos lleva tres semanas parada.
+    </p>
+    <ul class="watch__bullets">
+      <li>Revisiones RITE, gas y fotovoltaica con su periodicidad y su parte firmado.</li>
+      <li>Aviso de renovación de contrato con 60 días de antelación.</li>
+      <li>Contrato de garantía total con presupuesto anual cerrado, cuando interesa.</li>
+    </ul>
+  </div>
+
+  <div class="watch__panel" aria-hidden="true">
+    <div class="panel__bar mono"><span>SUPERVISIÓN · CARTERA</span><span class="panel__live">EN VIVO</span></div>
+    <ul class="panel__rows mono" id="panelRows"></ul>
+    <p class="panel__foot mono">Panel ilustrativo del portal de cliente</p>
+  </div>
+</section>
+
+<!-- ─────────── CERTIFICACIONES ─────────── -->
+<section class="certs" aria-label="Certificaciones y pertenencia">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track" id="marqueeTrack"></div>
+  </div>
+  <ul class="certs__sr">
+    <li>Empresa instaladora de gas autorizada</li>
+    <li>Empresa instaladora RITE</li>
+    <li>Empresa mantenedora de instalaciones térmicas</li>
+    <li>ISO 9001</li>
+    <li>Sistema integrado de calidad, medio ambiente y prevención de riesgos laborales</li>
+    <li>Parque Científico y Tecnológico de Gijón</li>
+  </ul>
+</section>
+
+<!-- ─────────── CONTACTO ─────────── -->
+<section class="contact" id="contacto">
+  <div class="contact__body">
+    <h2 class="h2">Contadnos qué<br>hay que resolver</h2>
+    <p class="contact__lead">
+      Si es una avería, llamad. Si es un proyecto, escribid con dos líneas de contexto y os
+      decimos si encaja antes de mover a nadie.
+    </p>
+
+    <dl class="contact__data">
+      <div>
+        <dt>Oficina</dt>
+        <dd>Ctra. Olloniego-Tudela 1, parcela B35<br>33660 Oviedo, Asturias</dd>
+      </div>
+      <div>
+        <dt>Nave y taller</dt>
+        <dd>C/ Juan de la Cierva 2E, nave 4<br>Polígono Mora Garay, 33211 Gijón</dd>
+      </div>
+      <div>
+        <dt>Teléfono</dt>
+        <dd><a href="tel:+34985135061">985 135 061</a><br><a href="tel:+34616136147">616 136 147</a></dd>
+      </div>
+      <div>
+        <dt>Correo</dt>
+        <dd><a href="mailto:ecosar@ecosar.com">ecosar@ecosar.com</a></dd>
+      </div>
+    </dl>
+  </div>
+
+  <form class="form" id="form" novalidate>
+    <div class="field">
+      <label for="f-nombre">Nombre y organización</label>
+      <input id="f-nombre" name="nombre" type="text" autocomplete="organization" required>
+    </div>
+    <div class="field">
+      <label for="f-email">Correo o teléfono</label>
+      <input id="f-email" name="contacto" type="text" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="f-tipo">Tipo de instalación</label>
+      <select id="f-tipo" name="tipo">
+        <option>Autoconsumo fotovoltaico</option>
+        <option>Sala de calderas o instalación térmica</option>
+        <option>Instalación eléctrica</option>
+        <option>Gas o gasoil</option>
+        <option>Contrato de mantenimiento</option>
+        <option>Proyecto de ingeniería o licitación</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-msg">Qué hay que resolver</label>
+      <textarea id="f-msg" name="mensaje" rows="4"></textarea>
+    </div>
+    <button class="btn btn--block" type="submit">Enviar la consulta</button>
+    <p class="form__note" id="formNote" role="status">Boceto de diseño: el formulario no envía nada todavía.</p>
+  </form>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__brand">
+    <svg class="nav__logo" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
+      <path d="M2 3h24M2 10h17M2 17h24" stroke="currentColor" stroke-width="2.6" fill="none"/>
+    </svg>
+    <span>Grupo Ecosar, S.L.</span>
+  </div>
+  <p class="foot__legal mono">CIF B33926619 · Constituida en 2005 · Oviedo, Asturias</p>
+  <nav class="foot__links" aria-label="Legal">
+    <a href="#capacidades">Qué hacemos</a>
+    <a href="#obras">Obras</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</footer>
+
+<div class="badge" id="badge">
+  <span class="badge__dot" aria-hidden="true"></span>
+  <span>Prediseño. No es la web publicada de Ecosar.</span>
+  <button type="button" id="badgeHide" aria-label="Ocultar el aviso de prediseño">Ocultar</button>
+</div>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/js/hero-gl.js"></script>
+<script src="assets/js/scenes.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
